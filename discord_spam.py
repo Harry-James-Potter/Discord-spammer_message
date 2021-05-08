@@ -2,13 +2,12 @@ import time
 from pynput import keyboard
 
 keyboardd = keyboard.Controller()
-till = int(input("No of times: "))
-text = input("text: ")
+i = 1
 time.sleep(10)  #  TIME TILL GO TO APP  #
 
-while till >= 1:  #  LOOP DE LOOP  #
-    keyboardd.type(str(text))
+while True:  #  LOOP DE LOOP  #
+    keyboardd.type(str(i))
     keyboardd.press(keyboard.Key.enter)
     keyboardd.release(keyboard.Key.enter)
-    time.sleep(1.5)  # ADJUST ACCORDINGLY  #
-    till -= 1
+    time.sleep(1.4)  # ADJUST ACCORDINGLY  #
+    i += 1
